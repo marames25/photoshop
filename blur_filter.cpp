@@ -122,8 +122,14 @@ int main() {
         return 1;
     }
 
-    int radius = 15;
-
+    int radius ;
+    cout<<"Please enter the percentage of the blur you want (10 : 30): \n";
+    cin>>radius;
+    while (radius < 10 || radius > 30) {
+        cout << "Radius better to be between 10 and 30." << endl;
+        cout << "Please enter the percentage of the blur you want (15 : 30): ";
+        cin >> radius;
+    }
 
     Image filteredImage = BlurFilter(pic, radius);
 
